@@ -33,10 +33,12 @@ export const useAuthStore = defineStore({
     },
 
     getters: {
+        isAuth: (state) => state.user != null,
         getCurrentUser(state){
             return state.user
         }
-    }
+    },
+    persist:true
 
 
 
